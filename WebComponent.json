@@ -1,0 +1,1 @@
+{"name":"WebComponent","master":true,"version":"0.0.1","description":"","schemas":{},"models":{},"behaviors":{"z192731ad2019275":{"_id":"z192731ad2019275","component":"x1d3501d5321c67f","state":"start","action":"function start() { \n  \n}","useCoreAPI":false,"core":false}},"types":{},"components":{},"_id":"x1d3501d5321c67f"}
