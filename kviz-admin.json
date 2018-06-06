@@ -1,5 +1,5 @@
 {
-	"category": "q",
+	"category": "show",
 	"q": [
 		{
 			"text": "Ravasz kérdés",
@@ -60,7 +60,8 @@
 				{
 					"text": [
 						"Egy meglévő kérdés"
-					]
+					],
+					"q": "Egy meglévő kérdés"
 				}
 			]
 		}
@@ -69,7 +70,7 @@
 		{
 			"name": "Új Show",
 			"date": "Dátum",
-			"game": "hid-kviz-1"
+			"game": "hid-kviz-2"
 		}
 	]
 }
