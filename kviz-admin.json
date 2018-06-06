@@ -10,7 +10,21 @@
 					"mégegy rossz válasz",
 					"jó válasz"
 				],
-				"p": "0"
+				"p": "0",
+				"collection": [
+					{
+						"text": "rossz válasz",
+						"p": "0"
+					},
+					{
+						"text": "hibás válasz",
+						"p": "0"
+					},
+					{
+						"text": "jó válasz",
+						"p": "1"
+					}
+				]
 			}
 		},
 		{
