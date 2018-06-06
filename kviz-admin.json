@@ -1,0 +1,37 @@
+{
+	"category": "q",
+	"q": [
+		{
+			"text": "Ravasz kérdés",
+			"maxp": "1",
+			"a": {
+				"text": "rossz válasz",
+				"p": "0"
+			}
+		},
+		{
+			"text": [
+				"Nincs kérdés"
+			]
+		}
+	],
+	"game": [
+		{
+			"text": "Új game",
+			"q": [
+				{
+					"text": [
+						"Egy meglévő kérdés"
+					]
+				}
+			]
+		}
+	],
+	"show": [
+		{
+			"name": "Új Show",
+			"date": "Dátum",
+			"game": "hid-kviz-1"
+		}
+	]
+}
