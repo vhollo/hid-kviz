@@ -5,7 +5,11 @@
 			"text": "Ravasz kérdés",
 			"maxp": "1",
 			"a": {
-				"text": "rossz válasz",
+				"text": [
+					"rossz válasz",
+					"mégegy rossz válasz",
+					"jó válasz"
+				],
 				"p": "0"
 			}
 		},
