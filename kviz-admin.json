@@ -31,6 +31,26 @@
 			"text": [
 				"Nincs kérdés"
 			]
+		},
+		{
+			"text": "Fogós kérdés",
+			"maxp": "1",
+			"a": {
+				"collection": [
+					{
+						"text": "hibás válasz",
+						"p": "0"
+					},
+					{
+						"text": "helytelen válasz",
+						"p": "0"
+					},
+					{
+						"text": "helyes válasz",
+						"p": "1"
+					}
+				]
+			}
 		}
 	],
 	"game": [
