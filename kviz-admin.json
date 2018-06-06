@@ -28,11 +28,6 @@
 			}
 		},
 		{
-			"text": [
-				"Nincs kérdés"
-			]
-		},
-		{
 			"text": "Fogós kérdés",
 			"maxp": "1",
 			"a": {
@@ -53,23 +48,11 @@
 			}
 		}
 	],
-	"game": [
-		{
-			"text": "Új game",
-			"q": [
-				{
-					"text": [
-						"Egy meglévő kérdés"
-					],
-					"q": "Egy meglévő kérdés"
-				}
-			]
-		}
-	],
+	"game": [],
 	"show": [
 		{
 			"name": "Új Show",
-			"date": "Dátum",
+			"date": "2018-06-06",
 			"game": "hid-kviz-2"
 		},
 		{
