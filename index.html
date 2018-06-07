@@ -64,14 +64,20 @@
 	</div>
 
 	<section class="[if(category == 'q', 'show')]">
+		<div hidden>
+			<select id="qs" property="qs" readonly mv-value="q">
+					<option mv-multiple mv-value="qs.text"></option>
+			</select>
+		</div>
+				
 		<h1>Q's</h1>
 		<div property="q" mv-multiple>
 			<h3>
-				<span property="text">Új kérdés</span>
+				<span property="text">Új kérdés</span><br>
+				<div style="font-size:small">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
 			</h3>
 			<p>
 				Max pontszám: <span property="maxp" mv-default="1"></span>
-				_id: <span property="_id" mv-default="[idify(text)]"></span>
 			</p>
 			<h4>Válaszok</h4>
 			<ul property="a">
@@ -82,42 +88,36 @@
 			</ul>
 		</div>
 
-		<div hidden>
-			<h2>Q's</h2>
-			<select id="qs" property="qs" readonly mv-value="q">
-				<option mv-multiple mv-value="qs._id" value="qs._id">[qs._id]</option>
-			</select>
-		</div>
-		
-		</section>
+	</section>
 
 	<section class="[if(category == 'game', 'show')]">
 		<h1>Games</h1>
 		<div property="game" mv-multiple -mv-edit="#games">
 			<h3>
 				<span property="text">Új game</span>
+				<div style="font-size:small">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
 			</h3>
-			<p>
-				_id: <span property="_id" mv-default="[idify(text)]"></span>
-			</p>
 			<h4>Kérdések</h4>
 			<ul>
-				<span property="q" mv-multiple mv-edit="#qs">Új kérdés</span>
+				<li property="q" mv-multiple mv-edit="#qs">Új kérdés</li>
 			</ul>
 		</div>
 	</section>
 
 	<section class="[if(category == 'show', 'show')]">
-		<h1>Show</h1>
+		<h1>Shows</h1>
 		<div property="show" mv-multiple -mv-edit="#shows">
-			<p>
-				<span property="name">Új Show</span><time property="date" datetime="2014-06-01">Dátum</time>
-			</p>
+			<h3>
+				<span property="name">Új Show</span>
+			</h3>
+			<b>Dátum: <time property="date" datetime="2014-06-01">Dátum</time></b>
 			<p>Melyik game?
-				<span property="game" mv-edit="#games" mv-default="hid-kviz-1"></span> ([game]).
+				<span property="game" mv-edit="#games"></span>
 			</p>
 			
-			<div hidden>
+		</div>
+
+		<div hidden>
 				<select id="games">
 					<option value="hid-kviz-1">Híd Kvíz 1.</option>
 					<option value="hid-kviz-2">Híd Kvíz 2.</option>
@@ -125,7 +125,6 @@
 				</select>
 			</div>
 			
-		</div>
 	</section>
 
 	<!--
