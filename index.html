@@ -12,7 +12,8 @@
 				databaseURL: "https://kviz-2fd40.firebaseio.com",
 				projectId: "kviz-2fd40",
 				storageBucket: "kviz-2fd40.appspot.com",
-				messagingSenderId: "779002825559"
+				messagingSenderId: "779002825559",
+				UID: "Ipco3RWPLwSyc2MSampMlrZIxbz1"
 			};
 			firebase.initializeApp(config);
 		</script>
@@ -32,8 +33,8 @@
 			display: block;
 		}
 
-	[property] {
-		/* display: block; */
+	[property][tabindex] {
+		text-decoration: underline;
 	}
 	[mv-mode='edit'] {
 		background-color:beige;
@@ -43,6 +44,7 @@
 	<body>
 
 	<main mv-app="kviz-admin" 
+	-mv-mode="edit"
 	-mv-source="https://github.com/vhollo/hid-kviz" 
 	mv-storage="firebase" 
 	mv-unauthenticated-permissions="read edit save"
@@ -52,7 +54,7 @@
 	-mv-storage="kviz.json" 
 	mv-plugins="tinymce">
 
-	<b>Mit szerkesztesz?</b>
+	<b>Mit szerkesztenél?</b>
 	<div property="category" mv-edit="#categories" mv-mode="edit" mv-default="q" -mv-attribute="null"></div>
 
 	<div hidden>
@@ -64,17 +66,11 @@
 	</div>
 
 	<section class="[if(category == 'q', 'show')]">
-		<div hidden>
-			<select id="qs" property="qs" readonly mv-value="q">
-					<option mv-multiple mv-value="qs.text"></option>
-			</select>
-		</div>
-				
 		<h1>Q's</h1>
 		<div property="q" mv-multiple>
 			<h3>
 				<span property="text">Új kérdés</span><br>
-				<div style="font-size:small">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
+				<div style="font-size:initial">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
 			</h3>
 			<p>
 				Max pontszám: <span property="maxp" mv-default="1"></span>
@@ -88,6 +84,12 @@
 			</ul>
 		</div>
 
+		<div hidden>
+			<select id="qs" property="qs" readonly mv-value="q">
+					<option mv-multiple mv-value="qs.text" value="[qs._id]"></option>
+			</select>
+		</div>
+				
 	</section>
 
 	<section class="[if(category == 'game', 'show')]">
