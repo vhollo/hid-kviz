@@ -3,11 +3,10 @@
 		<meta charset="utf-8">
 		<title>KVÍZ Admin</title>
 
+		<script src="https://unpkg.com/wired-elements@latest/dist/wired-elements.bundled.min.js"></script>
 		<link rel="stylesheet" href="mavo.css">
 	  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"> -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
-
-		<script src="https://unpkg.com/wired-elements@latest/dist/wired-elements.bundled.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 		<script>
 			// Initialize Firebase
@@ -66,22 +65,24 @@
 
 	<section class="[if(category == 'q', 'show')]">
 		<h1>Q's</h1>
-		<wired-card property="q" mv-multiple>
-			<h3>
-				<span property="text">Új kérdés</span><br>
-				<div style="font-size:initial">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
-			</h3>
-			<p>
-				Max pontszám: <span property="maxp" mv-default="1"></span>
-			</p>
-			<h4>Válaszok</h4>
-			<ul property="a">
-				<li mv-multiple>
-					<span property="text">Új válasz</span><br>
-					<span property="p" mv-default="0"></span> pont
-				</li>
-			</ul>
-		</wired-card>
+		<div>
+			<wired-card property="q" mv-multiple elevation="1">
+				<h3>
+					<span property="text">Új kérdés</span><br>
+					<div style="font-size:initial">_id: <span property="_id" mv-default="[idify(text)]"></span></div>
+				</h3>
+				<p>
+					Max pontszám: <span property="maxp" mv-default="1"></span>
+				</p>
+				<h4>Válaszok kezelése</h4>
+				<ul property="a" mv-attribute="none">
+					<li mv-multiple>
+						<span property="text">Új válasz</span><br>
+						<span property="p" mv-default="0"></span> pontért.
+					</li>
+				</ul>
+			</wired-card>
+		</div>
 
 		<div hidden>
 			<select id="qs" property="qs" readonly mv-value="q">
